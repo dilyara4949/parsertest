@@ -3,7 +3,6 @@ package assets
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 )
 
 type Product struct {
@@ -36,8 +35,6 @@ func Parse(input []byte) ([]Product, error) {
 	if input == nil || len(input) == 0 {
 		return nil, errEmptyInput
 	}
-
-	fmt.Println(len(input))
 
 	if len(input) > 10 {
 		return nil, errManyElements
